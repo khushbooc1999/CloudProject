@@ -1,0 +1,125 @@
+<!-- <p>form works!</p> -->
+<div *ngIf="alert" class="alert-success" role="alert">
+    <strong>SUCCESS !</strong> You have registered succesfully.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+
+<div class="container">
+    <h2 style="text-align: center;">Registration form</h2>
+  </div>
+ 
+
+
+   <form [formGroup]="form">
+     <div class="container">
+       <div class="row">
+         <div class="col-25">
+          <label for="name" style="font-size: large;">Full name</label>
+         </div>
+       <div class="col-75">
+         <input required type="text" class="form-control" id="name" 
+         placeholder="Enter full name" formControlName="name"   />
+       </div>
+     </div>
+     
+    
+    <div class="row">
+     <div class="col-25">
+       <label for="name"  style="font-size: large;">Email address</label>
+     </div>
+     <div class="col-75">
+      
+       <input required type="email" class="form-control" id="email" 
+         placeholder="Enter email" formControlName="email" />
+       </div>
+     </div>
+ 
+     
+    <div class="row">
+     <div class="col-25">
+       <label for="name"  style="font-size: large;">Department</label>
+     </div>
+     <div class="col-75">
+      
+       <input required type="text" class="form-control" id="department" 
+         placeholder="Enter department" formControlName="department" />
+       </div>
+     </div>
+ 
+     
+     <div class="row">
+      <div class="col-25">
+        <label for="name"  style="font-size: large;">Designation</label>
+      </div>
+      <div class="col-75">
+       
+        <input required type="text" class="form-control" id="designation" 
+          placeholder="Enter designation" formControlName="designation" />
+        </div>
+      </div>
+ 
+      
+     <div class="row">
+      <div class="col-25">
+        <label for="name"  style="font-size: large;">Mobile Number</label>
+      </div>
+      <div class="col-75">
+       
+        <input required type="text" class="form-control" id="number" 
+          placeholder="Enter number" formControlName="number" />
+        </div>
+      </div>
+ 
+      
+      <div class="row">
+       <div class="col-25">
+         <label for="name"  style="font-size: large;">VM Name</label>
+       </div>
+       <div class="col-75">
+        
+         <input required type="text" class="form-control" id="vm" 
+           placeholder="Enter VMName" formControlName="vm" />
+         </div>
+ 
+        
+         <div class="row">
+          <div class="col-25">
+            <label for="name"  style="font-size: large;">OS </label>
+          </div>
+          <div class="col-75">
+           
+            <input required type="text" class="form-control" id="os" 
+              placeholder="Enter OS type" formControlName="os" />
+            </div>
+ 
+            
+            <div class="row">
+             <div class="col-25">
+               <label for="name"  style="font-size: large;">Storage</label>
+             </div>
+             <div class="col-75">
+              
+               <input required type="text" class="form-control" id="storage" 
+                 placeholder="Enter Storage Capacity" formControlName="storage" />
+               </div>
+             </div>
+        
+          </div>
+     
+       </div>
+  
+     
+ 
+     </div>
+ 
+     <div class="center">
+       <button   class="button" type="submit" (click)="submit()" [disabled]="!form.valid" >Submit</button>
+     </div>
+   
+     
+    
+   </form>
